@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sentiment analysis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style/style.css">
+    <link rel="icon" href="/static/images/stemma.png">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon"><img src="/static/images/stemma.png"
+                        width="50px"></span>
+                <h2>TrasattiGPT</h2>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="/" class="active">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <h1>Our functionalities</h1>
+            
+            <!-- Nuova sezione con i rettangoli in due colonne -->
+            <div class="cards-container">
+                <div class="card">
+                    <h2>Text Analysis</h2>
+                    <p>Analyze the sentiment of your text to determine if it's positive, negative, or neutral.</p>
+                    <a href="/sentiment/" class="card-button">Try Now</a>
+                </div>
+                <div class="card">
+                    <h2>Metadata Extraction</h2>
+                    <p>Extract useful metadata and information from your documents and text.</p>
+                    <a href="/metadata/" class="card-button">Try Now</a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Instructions</h3>
+                    <p>Choose what you want to do. You can see what we offer on our home page.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Our functionalities</h3>
+                    <ul>
+                        <li><a href="/sentiment/">Text Analysis</a></li>
+                        <li><a href="/metadata/">Metadata Extraction</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: 
+                        <a href="mailto:trasatti.damiano@istitutomontani.edu.it" style="text-decoration: underline;" target="_blank">
+                            trasatti.damiano@istitutomontani.edu.it
+                        </a>
+                    </p>
+                    <p>Portfolio: 
+                        <a href="https://www.portfoliodamianotrasatti.altervista.org/" style="text-decoration: underline;" target="_blank">
+                            portfoliodamianotrasatti.altervista.org
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;
+                    <script>
+                        document.write(new Date().getFullYear()) // Aggiorna l'anno
+                    </script>
+                    TrasattiGPT. All rights reserved.
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

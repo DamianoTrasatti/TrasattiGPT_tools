@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Metadata Extraction</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style/metadata.css') }}">
+</head>
+<body>
+<div class="container">
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <span class="logo-icon"><img src="/static/images/stemma.png"
+                    width="50px"></span>
+            <h2>TrasattiGPT - Metadata Extraction</h2>
+        </div>
+        <nav class="nav">
+            <ul>
+                <li><a href="/" class="active">Return to Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <h1>Metadata Extraction</h1>
+        <form method="POST" action="/metadata/upload" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*" capture="environment" required>
+            <input type="submit" value="Analize">
+        </form>
+
+        {% if tags %}
+        <div class="result">
+            {% for tag, value in tags.items() %}
+                <p><strong>{{ tag }}</strong>: {{ value }}</p>
+            {% endfor %}
+        </div>
+        {% elif tags is not none %}
+        <div class="result">
+            <p>Nessun metadato EXIF trovato.</p>
+        </div>
+        {% endif %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Instructions</h3>
+                    <p>This instrument write all mmetadata of your image. For example date and dispositive!</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Important</h3>
+                    <ul>
+                        <li><a>If you dowload a photo by Whatsapp or Telegram, this photo can be without metadatas because these social media cancel them.</a></li>
+                        <li><a>My girlfriend left me (negative)</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: 
+                        <a href="mailto:trasatti.damiano@istitutomontani.edu.it" style="text-decoration: underline;" target="_blank">
+                            trasatti.damiano@istitutomontani.edu.it
+                        </a>
+                    </p>
+                    <p>Portfolio: 
+                        <a href="https://www.portfoliodamianotrasatti.altervista.org/" style="text-decoration: underline;" target="_blank">
+                            portfoliodamianotrasatti.altervista.org
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy;
+                    <script>
+                        document.write(new Date().getFullYear()) // Aggiorna l'anno
+                    </script>
+                    TrasattiGPT. All rights reserved.
+                </p>
+            </div>
+    </footer>
+</div>
+</body>
+</html>
